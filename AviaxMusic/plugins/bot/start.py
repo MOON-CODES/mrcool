@@ -94,7 +94,6 @@ async def start_pm(client, message: Message, _):
             await vip.edit_text(f"**ᴅιиg ᴅσиg ꨄ︎...❣️..**")
             await vip.edit_text(f"**ᴅιиg ᴅσиg ꨄ︎....❣️.**")
             await vip.edit_text(f"**ᴅιиg ᴅσиg ꨄ︎.....❣️**")  
-        out = private_panel(_)
         UP, CPU, RAM, DISK = await bot_sys_stats()
         await message.reply_photo(
             photo=config.START_IMG_URL,
