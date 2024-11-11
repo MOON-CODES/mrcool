@@ -15,6 +15,7 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 BOT_USERNAME = getenv("BOT_USERNAME", "leharmusic_bot")
 
 # Get your mongo url from cloud.mongodb.com
+OWNER_ID = int(getenv("OWNER_ID", 6391774843))
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 60))
