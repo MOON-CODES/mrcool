@@ -6,10 +6,10 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
-from AviaxMusic import app
-from AviaxMusic.misc import _boot_
-from AviaxMusic.plugins.sudo.sudoers import sudoers_list
-from AviaxMusic.utils.database import (
+from BrandrdXMusic import app
+from BrandrdXMusic.misc import _boot_
+from BrandrdXMusic.plugins.sudo.sudoers import sudoers_list
+from BrandrdXMusic.utils.database import (
     add_served_chat,
     add_served_user,
     blacklisted_chats,
@@ -17,9 +17,9 @@ from AviaxMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from AviaxMusic.utils.decorators.language import LanguageStart
-from AviaxMusic.utils.formatters import get_readable_time
-from AviaxMusic.utils.inline import help_pannel, private_panel, start_panel
+from BrandrdXMusic.utils.decorators.language import LanguageStart
+from BrandrdXMusic.utils.formatters import get_readable_time
+from BrandrdXMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
 
@@ -85,11 +85,11 @@ async def start_pm(client, message: Message, _):
                     text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
     else:
-         out = private_panel(_)
-        UP, CPU, RAM, DISK = await bot_sys_stats()
+        out = private_panel(_)
+        await message.reply_sticker("CAACAgUAAxkBAAEQI1hlTLog9AN9m9USFpWRCMlU8iMCVwACbQQAAjYSmFa-LfaOxMHalzME")
         await message.reply_photo(
             photo=config.START_IMG_URL,
-            caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM),
+            caption=_["start_2"].format(message.from_user.mention, app.mention),
             reply_markup=InlineKeyboardMarkup(out),
         )
         if await is_on_off(2):
